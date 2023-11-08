@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+input,
+textarea,
+button,
+a{
+    outline: none;
+}
+
+/* ==================================================
+                      Navbar
+================================================== */
+
+#navbar
+{
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: flex;
+    height: 60px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: space-evenly;
+    justify-content: space-evenly;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+#logo
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#delete-all-btn{
+    background: #f44336;
+    color: #f7f7f7;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#delete-all-btn:hover{
+    background: #f44336e7;
+    color: #fff;
+}
+
+/* ==================================================
+                    Add Note Form
+================================================== */
+
+.add-note-form{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+fieldset {
+    background-color: #eeeeee;
+}
+
+legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.form-group
+{
+    margin-top: 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;   
+}  
+
+.form-group label
+{
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: 5px;
+}
+
+.form-group input
+{
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form-group textarea
+{
+    resize: none;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 65px;
+}
+
+#add-note-btn
+{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid green;
+    background-color: #34bd34;
+    color: #f7f7f7;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+}
+
+#add-note-btn:hover
+{
+    background-color: #34bd34de;
+    color: #fff;
+}
+
+#error{
+    background: #f44336;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ==================================================
+                    Note Cards DOM
+================================================== */
+
+#main-box
+{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#main-box h1
+{
+    text-align: center;
+}
+
+#notes-container
+{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#note-card
+{
+    width: 260px;
+    height: 270px;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-right: 20px;
+    background-color: #eeeeee;
+}
+
+#card-title
+{
+    width: 257px;
+    word-wrap: break-word;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    height: 60px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+#card-content
+{
+    word-wrap: break-word;
+    width: 250px;
+    height: 200px;
+    overflow: scroll;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.card-del-button
+{
+    cursor: pointer;
+    background-color: #d83c37;
+    color: #f7f7f7;
+    height: 32px;
+    width: 32px;
+    font-size: 15px;
+    border-radius: 50%;
+    border: 1px solid red;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.card-del-button:hover
+{
+    background-color: #d83c37e1;
+    color: #fff;
+    
+}
+
+.card-edit-button
+{
+    cursor: pointer;
+    background-color: #0275d8; 
+    color: #f7f7f7;
+    height: 32px;
+    width: 32px;
+    font-size: 15px;
+    border-radius: 50%;
+    border: 1px solid blue ;
+    position: absolute;
+    right: 45px;
+    bottom: 5px;
+}
+
+.card-edit-button:hover
+{
+    background-color: #0274d8de; 
+    color: #fff;
+}
+
+
+/* ==================================================
+                View Code Card
+================================================== */
+
+.view-code
+{
+    width: 105px;
+    height: 25px;
+    background-color: black;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-code a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.fa-github
+{
+    font-size: 20px;
+}
+
+
+/* ==================================================
+                Responsive Design
+================================================== */
+
+@media only screen and (max-width: 530px) {
+    #navbar
+    {
+        display: block;
+        height: 120px;
+        text-align: center;
+    }
+
+    #logo
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #delete-all-btn
+    {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    #main-box
+    {
+        margin-bottom: 20px;
+    }
+}

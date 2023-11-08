@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVIXION TECH NOTES APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <p id="logo">INNOVIXION TECH NOTES APP</p>
+
+        <form action="#" autocomplete="off">
+            <input type="text" id="search-input" name="search" onkeyup="searchFunction()" placeholder="Search...">
+        </form>
+
+        <button type="submit" id="delete-all-btn"><i class="fas fa-trash-alt"></i> Delete All </button>
+    </nav>
+
+    <form class="add-note-form" name="noteForm" autocomplete="off">
+        <fieldset>
+            <legend>Add Note:</legend>
+
+            <div class="form-group">
+                <label for="title">Note Title: </label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Note Content: </label>
+                <textarea name="message" id="content" rows="10" cols="30" required></textarea>
+                <span id="error"></span>
+            </div>
+            
+            <button id="add-note-btn"><i class="fas fa-plus"></i></button>
+        </fieldset>
+    </form>
+
+    <div id="main-box">
+        <hr>
+        <h1>Your Notes: </h1>
+        <hr>
+
+        <div id="notes-container"> 
+        </div>
+    </div>
+
+    <div class="view-code">
+        <a href="https://github.com/Valivar/ONLINE-NOTE-APP" target="_blank">View Code <i class="fab fa-github"></i></a>      
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
